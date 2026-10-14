@@ -251,14 +251,15 @@ model = Mymodel(
 
 model = model.to(device)
 
-model.load_state_dict(
-    torch.load(
-        "flower_cnn_final.pth",
-        map_location=device
-    )
-)
+##这个是如果已经训练了参数可以导入，在其基础上训练
+# model.load_state_dict(
+#     torch.load(
+#         "flower_cnn_final.pth",
+#         map_location=device
+#     )
+# )
 
-print("模型加载完成")
+# print("模型加载完成")
 
 criterion = nn.CrossEntropyLoss()
 
